@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Мой сайт</title>
+  <style>
+    body{font-family:system-ui,Arial;margin:40px;max-width:850px}
+    .card{border:1px solid #ddd;border-radius:14px;padding:16px;margin-top:16px}
+    input,textarea{width:100%;padding:12px;font-size:15px;margin-top:10px}
+    button{padding:12px 16px;font-size:15px;cursor:pointer;margin-top:12px}
+  </style>
+</head>
+<body>
+  <h1>Анти-мошенник</h1>
+  <p>Вставь текст сообщения и получи оценку риска.</p>
+
+  <div class="card">
+    <textarea id="txt" placeholder="Вставь SMS/сообщение..."></textarea>
+    <button onclick="check()">Проверить</button>
+    <div id="out" style="margin-top:12px;"></div>
+  </div>
+
+  <script>
+    function check(){
+      const t = document.getElementById("txt").value.trim();
+      document.getElementById("out").textContent =
+        t ? "Демо: риск 78/100 (пример)" : "Вставь текст выше 🙂";
+    }
+  </script>
+</body>
+</html>
